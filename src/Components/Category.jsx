@@ -7,7 +7,7 @@ import VideoCard from './VideoCard';
 
 
 
-function Category({setRemoveCategoryVideoResponse}) {
+function Category({deleteVideoCategoryResponse,setRemoveCategoryVideoResponse}) {
 
   const [allCategories,setAllCategories] = useState("");
 
@@ -18,7 +18,7 @@ function Category({setRemoveCategoryVideoResponse}) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  useEffect(()=>{getAllcategory()},[])
+  useEffect(()=>{getAllcategory()},[deleteVideoCategoryResponse])
 
   const getAllcategory = async ()=>{
     try{
